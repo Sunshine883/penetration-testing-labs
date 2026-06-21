@@ -67,8 +67,8 @@ Screenshots of the scans are stored in:
 ![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Full%20Port%20Scan.jpg?raw=true)
 ![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Results%20Summary.jpg?raw=true)
 ![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Specific%20Ports.jpg?raw=true)
-![Aggressive Scan](PASTE-LINK-HERE)
-![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan]([https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Screen%20shots%20of%20scans%20and%20where%20they%20are%20stored.jpg?raw=true])
+![Aggressive Scan]([PASTE-LINK-HERE])
 
 
 
