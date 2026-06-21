@@ -63,7 +63,7 @@ Screenshots
 Screenshots of the scans are stored in: 
 
 ![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Aggressive%20Scan%20OS%20detectin%20scripts%20versioning.jpg?raw=true)
-![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Basic%20Host%20Discover%20.jpg?raw=true)
 ![Aggressive Scan](PASTE-LINK-HERE)
 ![Aggressive Scan](PASTE-LINK-HERE)
 ![Aggressive Scan](PASTE-LINK-HERE)
