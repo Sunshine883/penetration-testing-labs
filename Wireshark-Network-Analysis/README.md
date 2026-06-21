@@ -141,10 +141,23 @@ Code
 ![HTTP GET Request](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/1%20Opening%20a%20PCAP%20.jpg?raw=true)
 
 
+
+
+
 ![DNS Query](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/2%20Starting%20a%20Capture.jpg?raw=true)
 
 
-![ICMP Echo Reply](URL-HERE)
+
+
+
+![ICMP Echo Reply](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/3%20Applying%20Display%20Filters.jpg?raw=true)
+
+
+
+
 ![ARP Broadcast](URL-HERE)
+
+
+
 Conclusion
 This lab demonstrates my ability to use Wireshark for packet‑level analysis, protocol inspection, and network forensics. It highlights essential SOC and blue‑team skills such as filtering traffic, interpreting protocol behavior, identifying anomalies, and documenting findings clearly.
