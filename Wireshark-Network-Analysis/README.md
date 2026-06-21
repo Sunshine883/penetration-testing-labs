@@ -123,21 +123,6 @@ Unexpected ports or traffic types
 Screenshots
 Screenshots are stored in:
 
-Code
-/screenshots/
-Include:
-
-Filtered views (http, dns, icmp, arp)
-
-Packet Details pane expanded
-
-Follow TCP Stream output
-
-Any anomalies or interesting packets
-
-Example Markdown format for your README:
-
-Code
 ![HTTP GET Request](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/1%20Opening%20a%20PCAP%20.jpg?raw=true)
 
 
@@ -158,6 +143,21 @@ Code
 ![ARP Broadcast](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/4%20Location%20of%20screen%20shots.jpg?raw=true)
 
 
+Code
+/screenshots/
+Include:
+
+Filtered views (http, dns, icmp, arp)
+
+Packet Details pane expanded
+
+Follow TCP Stream output
+
+Any anomalies or interesting packets
+
+Example Markdown format for your README:
+
+Code
 
 Conclusion
 This lab demonstrates my ability to use Wireshark for packet‑level analysis, protocol inspection, and network forensics. It highlights essential SOC and blue‑team skills such as filtering traffic, interpreting protocol behavior, identifying anomalies, and documenting findings clearly.
