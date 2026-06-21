@@ -138,7 +138,9 @@ Any anomalies or interesting packets
 Example Markdown format for your README:
 
 Code
-![HTTP GET Request](URL-HERE)
+![HTTP GET Request](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/1%20Opening%20a%20PCAP%20.jpg?raw=true)
+
+
 ![DNS Query](URL-HERE)
 ![ICMP Echo Reply](URL-HERE)
 ![ARP Broadcast](URL-HERE)
