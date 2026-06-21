@@ -62,14 +62,6 @@ Misconfigured SSL/TLS
 Screenshots
 Screenshots of the scans are stored in: the Nmap-Network-Screening/screenshots folder
 
-Aggressive Scan
-![Scan]([URL](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Aggressive%20Scan%20OS%20detectin%20scripts%20versioning.jpg?raw=true)-HERE)
-![Scan]([URL](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Basic%20Host%20Discover%20.jpg?raw=true)-HERE)
-![Scan]([URL](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Full%20Port%20Scan.jpg?raw=true)-HERE)
-![Scan]([URL](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Specific%20Ports.jpg?raw=true)-HERE)
-![Scan](URL-HERE)
-![Scan](URL-HERE)
-![Scan](URL-HERE)
 
 
 Code
