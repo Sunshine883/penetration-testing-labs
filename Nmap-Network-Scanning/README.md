@@ -62,8 +62,13 @@ Misconfigured SSL/TLS
 Screenshots
 Screenshots of the scans are stored in: 
 
-
-
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
+![Aggressive Scan](PASTE-LINK-HERE)
 
 
 
