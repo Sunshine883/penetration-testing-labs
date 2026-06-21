@@ -1,30 +1,21 @@
-# Nmap Network Scanning Lab
+Nmap – Network Scanning Lab
+This lab demonstrates my ability to perform host discovery, port scanning, service enumeration, and version detection using Nmap, one of the most widely used tools in penetration testing and network reconnaissance.
 
-## Objective
-Perform a network scan using Nmap to identify open ports, running services, and potential security risks on a target system.
+Objectives
+Identify live hosts on a network
 
-## Tools Used
-- Nmap
-- Kali Linux (or your OS)
-- Test target (VM or local machine)
+Enumerate open ports
 
-## Commands Executed
-(You will fill this in after you redo the lab)
-Example:
-nmap -sV -A 192.168.1.10
+Detect running services and versions
 
-## Findings
-(You will fill this in after running the scan)
-- Open ports discovered
-- Services detected
-- Versions identified
+Interpret scan results to understand attack surface
 
-## Security Implications
-Explain what an attacker could do with the information found.
+Document findings clearly and professionally
 
-## Mitigation
-Explain how to reduce or eliminate the risks identified.
+Environment
+Kali Linux (VM)
 
-## Screenshots
-Screenshots of your scan results will go in the `screenshots` folder.
+Target: Controlled practice host (e.g., scanme.nmap.org or local VM)
+
+Tool: Nmap v7.x
 
