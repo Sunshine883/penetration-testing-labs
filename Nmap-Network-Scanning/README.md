@@ -72,13 +72,9 @@ Screenshots of the scans are stored in:
 
 ![Scan Specific Ports ](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Specific%20Ports.jpg?raw=true)
 
-![Location of Scans]([https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Screen%20shots%20of%20scans%20and%20where%20they%20are%20stored.jpg?raw=true])
+![Location of scans](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Screen%20shots%20of%20scans%20and%20where%20they%20are%20stored.jpg?raw=true)
 
 ![Service and Version Detection](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Service%20%20and%20Version%20Detection.jpg?raw=true)
-
-
-
-
 
 Code
 /screenshots/
