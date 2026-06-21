@@ -60,7 +60,7 @@ Vulnerable web applications
 Misconfigured SSL/TLS
 
 Screenshots
-Screenshots of the scans are stored in: the Nmap-Network-Screening/screenshots folder
+Screenshots of the scans are stored in: 
 
 
 
