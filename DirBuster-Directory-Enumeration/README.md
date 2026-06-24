@@ -44,4 +44,16 @@ This lab demonstrates the use of **DirBuster**, a directory and file brute‑for
 ## Screenshots
 All screenshots are stored in:
 
+### 1. Configure Target
+![Configure Target](screenshots/configure%20target.png)
+
+### 2. Run Scan
+![Run Scan](screenshots/run%20scan.png)
+
+### 3. Review Results
+![Review Results](screenshots/review%20results.png)
+
+### 4. Directory Enumeration
+![Directory Enumeration](screenshots/directory%20enumeration.png)
+
 
