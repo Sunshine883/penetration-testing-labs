@@ -52,3 +52,19 @@ This lab demonstrates the use of **Hashcat**, a powerful GPU‑accelerated passw
 All screenshots are stored in:
 
 
+Screenshots may include:
+- Hash identification
+- Hashcat command execution
+- Attack progress
+- Cracked password results
+
+---
+
+## Findings
+*(To be completed after running the real lab)*
+
+---
+
+## Conclusion
+*(To be completed after running the real lab)*
+
