@@ -76,9 +76,43 @@ Screenshots include:
 - Server accepted modified values without sanitization
 - Potential for IDOR or parameter tampering
 
+**1. Parameter Tampering**
+- Modified parameter: `<parameter name>`
+- Original value: `<value>`
+- Modified value: `<value>`
+- Server response: `<accepted/rejected/returned error>`
+- Impact: `<explain what this means>`
+
+**2. Input Validation Issues**
+- Observed that the server did/did not validate:
+  - Price changes
+  - Quantity changes
+  - User ID changes
+- Evidence: Screenshot #3 (Manipulating Requests)
+
+**3. Authentication / Session Behavior**
+- Cookies visible in intercepted requests
+- Session tokens were/weren’t protected
+- Potential risk: `<session fixation / weak session handling>`
+
+**4. Error Message Disclosure**
+- Server returned: `<error message>`
+- This may reveal internal details such as:
+  - Database errors
+  - Stack traces
+  - Validation logic
+
 ---
 
 ## Conclusion
 This lab demonstrates practical experience using Burp Suite for web application testing, including intercepting traffic, modifying requests, and analyzing server responses. These skills are essential for penetration testing and web application security assessments.
 
+### Skills Demonstrated
+- Web application traffic interception
+- HTTP request/response analysis
+- Parameter tampering and manipulation
+- Proxy configuration and certificate installation
+- Use of Burp Suite tools (Proxy, Repeater)
+- Identifying security weaknesses in web applications
+- Technical documentation and reporting
 
