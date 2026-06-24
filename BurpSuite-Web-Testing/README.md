@@ -49,6 +49,17 @@ This lab demonstrates the use of **Burp Suite Community Edition** to intercept, 
 
 ## Screenshots
 All screenshots are stored in:
+### 1. Configure Browser Proxy
+![Configure Browser Proxy](screenshots/1%20Configure%20Browser%20Proxy.png)
+
+### 2. Intercepting Requests
+![Intercepting Requests](screenshots/2%20Intercepting%20Requests.png)
+
+### 3. Manipulating Requests
+![Manipulating Requests](screenshots/3%20Manipulating%20Requests.png)
+
+### 4. Analyzing Responses
+![Analyzing Responses](screenshots/4%20Analyzing%20Responses.png)
 
 
 
