@@ -50,10 +50,16 @@ This lab demonstrates the use of **Hashcat**, a powerful GPU‑accelerated passw
 
 ## Screenshots
 All screenshots are stored in:
-![1 Identify Hash Type](screenshots/configure%20target.png)
-![2 Configure Hashcat](screenshots/configure%20target.png)
-![3 Run the Attack](screenshots/configure%20target.png)
-![4 Review Results](screenshots/configure%20target.png)
+
+![Identify Hash Type](screenshots/1_Identify_HashType.jpg)
+
+![Configure Hashcat](screenshots/2_Configure_Hashcat.jpg)
+
+![Run the Attack](screenshots/3_Run_the_attack.jpg)
+
+![Review Results](screenshots/4_Review_Results.jpg)
+
+
 
 Screenshots may include:
 - Hash identification
