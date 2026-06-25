@@ -61,32 +61,17 @@ Misconfigured SSL/TLS
 
 Screenshots
 Screenshots of the scans are stored in: 
+![Aggressive Scan / OS Detection / Scripts / Versioning](screenshots/AggressiveScan_OS_detection_scripts_versioning.jpg)
 
-![Basic Host Discovery](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Basic%20Host%20Discover%20.jpg?raw=true)
+![Basic Host Discovery](screenshots/Basic_Host_Discover.jpg)
 
+![Full Port Scan](screenshots/Full_Port_Scan.jpg)
 
+![Scan Results Summary](screenshots/Scan_Results_Summary.jpg)
 
-![Service and Version Detection](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Service%20%20and%20Version%20Detection.jpg?raw=true)
+![Scan Specific Ports](screenshots/Scan_Specific_Ports.jpg)
 
-
-
-![Aggressive Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Aggressive%20Scan%20OS%20detectin%20scripts%20versioning.jpg?raw=true)
-
-
-
-![Scan Specific Ports ](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Specific%20Ports.jpg?raw=true)
-
-
-
-![Full Port Scan](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Full%20Port%20Scan.jpg?raw=true)
-
-
-
-![Scan Results Summary](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Scan%20Results%20Summary.jpg?raw=true)
-
-
-
-![Location of scans](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Nmap-Network-Scanning/Nmap-Network-Scanning/screenshots/Screen%20shots%20of%20scans%20and%20where%20they%20are%20stored.jpg?raw=true)
+![Service Version Detection](screenshots/Service_Version_Detection.jpg)
 
 
 
