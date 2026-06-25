@@ -1,163 +1,70 @@
-Wireshark – Network Packet Analysis Lab
-This lab demonstrates my ability to capture, filter, inspect, and interpret network traffic using Wireshark, one of the most widely used tools for network forensics, SOC analysis, and packet‑level troubleshooting.
+Wireshark – Network Traffic Analysis Lab
+This lab demonstrates my ability to capture, inspect, and analyze network traffic using Wireshark, one of the most widely used packet analysis tools in cybersecurity. The exercises include opening packet capture files, performing live captures, and applying display filters to isolate relevant traffic.
 
 Objectives
-Capture live network traffic
+Open and analyze packet capture (PCAP) files
 
-Apply display filters to isolate specific protocols
+Perform live packet captures
 
-Analyze packet structure (Ethernet, IP, TCP/UDP, ICMP, HTTP, DNS, etc.)
+Apply Wireshark display filters to isolate protocols
 
-Interpret protocol behavior and communication patterns
-
-Identify anomalies or suspicious activity
+Interpret packet details and network behavior
 
 Document findings clearly and professionally
 
 Environment
-Kali Linux (VM)
+Tool: Wireshark (Kali Linux VM)
 
-Wireshark v3.x or v4.x
+Traffic Source: Sample PCAP files + live capture
 
-Network Interface: eth0 (VM NAT or Bridged)
+Network: Host‑only / isolated virtual lab
 
-Sample PCAPs: HTTP, DNS, ICMP, ARP (from Wireshark sample captures or lab traffic)
 
-Workflow & Techniques Used
-1. Opening a PCAP or Starting a Capture
-Launch Wireshark
+1. Opening a PCAP File
+Wireshark allows analysts to open existing packet capture files for offline analysis.
+This step demonstrates loading a PCAP and viewing the packet list, details, and byte pane.
 
-Select interface:
+screenshot location
+![Opening a PCAP](screenshots/1_Opening_a_PCAP.jpg)
 
-Code
-eth0
-OR open a saved capture:
+2. Starting a Live Capture
+A live capture is performed by selecting a network interface and beginning packet collection.
+This step shows Wireshark capturing real‑time traffic on the selected interface.
 
-Code
-File → Open → sample.pcap
-2. Applying Display Filters
-Common filters used in this lab:
+screenshot location
+![Starting a Capture](screenshots/2_Starting_a_capture.jpg)
 
-Code
+3. Applying Display Filters
+Display filters allow analysts to isolate specific protocols or traffic patterns.
+Examples include:
+
 http
+
 dns
+
 icmp
-tcp
-udp
-arp
-ip.addr == <target-ip>
+
 tcp.port == 80
-These filters isolate specific traffic types for deeper inspection.
 
-3. Packet Structure Analysis
-For each packet, I examined:
+ip.addr == <target-ip>
 
-Frame (capture metadata)
+This step demonstrates applying filters to narrow down the packet view.
 
-Ethernet II (MAC addresses)
+screenshot location
+![Applying Display Filters](screenshots/3_Applying_display_filters.jpg)
 
-Internet Protocol (IP)
+Common Filters Used in This Lab
+![Common Filters Used in Lab](screenshots/Common_filters_used_in_lab.jpg)
 
-Source/Destination
-
-TTL
-
-Flags
-
-Transport Layer
-
-TCP flags (SYN, ACK, FIN)
-
-UDP headers
-
-Application Layer
-
-HTTP GET/POST
-
-DNS queries/responses
-
-ICMP echo requests/replies
-
-4. Protocol‑Specific Analysis
-HTTP Traffic
-Identified GET and POST requests
-
-Viewed full request/response details
-
-Followed TCP streams to reconstruct conversations
-
-DNS Traffic
-Analyzed query types (A, AAAA, NS)
-
-Observed response codes
-
-Identified domain resolution patterns
-
-ICMP Traffic
-Echo request/reply behavior
-
-TTL values
-
-Round‑trip timing
-
-ARP Traffic
-Mapped IP → MAC relationships
-
-Observed ARP broadcasts and replies
 
 Findings
-(You will fill this in after you redo the lab.)
+Wireshark successfully captured and displayed network traffic.
 
-Examples of what to include:
+Display filters allowed precise isolation of HTTP, DNS, and ICMP packets.
 
-HTTP request paths and server responses
+Packet details revealed source/destination IPs, ports, flags, and protocol behavior.
 
-DNS domains queried
-
-ICMP echo patterns
-
-Suspicious or malformed packets
-
-Unexpected ports or traffic types
-
-Screenshots
-Screenshots are stored in:
-
-![HTTP GET Request](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/1%20Opening%20a%20PCAP%20.jpg?raw=true)
-
-
-
-
-
-![DNS Query](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/2%20Starting%20a%20Capture.jpg?raw=true)
-
-
-
-
-
-![ICMP Echo Reply](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/3%20Applying%20Display%20Filters.jpg?raw=true)
-
-
-
-
-![ARP Broadcast](https://github.com/Sunshine883/penetration-testing-labs/blob/main/Wireshark-Network-Analysis/Wireshark-Network-Analysis/screenshots/4%20Location%20of%20screen%20shots.jpg?raw=true)
-
-
-Code
-/screenshots/
-Include:
-
-Filtered views (http, dns, icmp, arp)
-
-Packet Details pane expanded
-
-Follow TCP Stream output
-
-Any anomalies or interesting packets
-
-Example Markdown format for your README:
-
-Code
+The PCAP analysis confirmed expected traffic patterns in the lab environment.
 
 Conclusion
-This lab demonstrates my ability to use Wireshark for packet‑level analysis, protocol inspection, and network forensics. It highlights essential SOC and blue‑team skills such as filtering traffic, interpreting protocol behavior, identifying anomalies, and documenting findings clearly.
+This lab demonstrates foundational network analysis skills using Wireshark, including opening PCAP files, performing live captures, and applying display filters. These skills are essential for SOC analysts, penetration testers, and anyone working in network security.
