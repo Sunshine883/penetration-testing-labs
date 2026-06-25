@@ -1,153 +1,61 @@
-# Hydra Brute Force Attacks
+Hydra – Brute Force Attacks Lab
+This lab demonstrates my ability to perform credential brute‑force attacks using Hydra, a powerful online password‑guessing tool commonly used in penetration testing. The exercises include HTTP GET form brute forcing and FTP login brute forcing within a safe, isolated virtual lab environment.
 
-This folder documents multiple brute‑force attack scenarios performed using **Hydra**, a powerful online password‑guessing tool commonly used in penetration testing.  
-Each lab demonstrates methodology, command usage, output interpretation, and defensive recommendations.
+Objectives
+Understand and perform brute‑force attacks using Hydra
 
-## Labs Included
-- HTTP GET Form Brute Force
-- SSH Brute Force
-- FTP Brute Force
+Enumerate valid credentials for HTTP and FTP services
 
-## Skills Demonstrated
-- Credential brute forcing
-- Service enumeration
-- Hydra command construction
-- Wordlist selection
-- Log analysis & defensive recommendations
-- Ethical penetration testing methodology
+Analyze Hydra output and identify successful logins
 
-## Disclaimer
-All testing was performed in an isolated lab environment that I own and control.
-# Hydra HTTP GET Brute Force Attack
+Document methodology, commands, and results clearly
 
-## Objective
-Perform a brute‑force attack against a vulnerable HTTP login form using Hydra to identify weak or guessable credentials.
+Demonstrate ethical penetration testing skills
 
-## Target
-- Service: HTTP GET login form
-- URL: http://<TARGET-IP>/login
-- Username: admin (example)
+Environment
+Attacker: Kali Linux (VM)
 
-## Command Used
+Target: Metasploitable2 (VM)
 
-## Methodology
-1. Identified the login page and confirmed it uses a simple HTTP GET request.
-2. Selected a known username ("admin") and a large password wordlist (rockyou.txt).
-3. Ran Hydra to test each password against the login endpoint.
-4. Monitored response length/status to detect successful authentication.
+Network: Host‑only / isolated virtual lab
 
-## Output (Sanitized)
-- Hydra reports a valid password when the server returns a different response size or status code.
-- Example success message:
-  - `[80][http-get] host: <TARGET-IP>   login: admin   password: <FOUND-PASSWORD>`
+1. HTTP GET Brute Force Attack
+Hydra can brute‑force web login forms using the http-get module.
+In this scenario, the target is a simple web login page on Metasploitable2.
 
-## Findings
-- The login form lacked rate limiting.
-- No account lockout or CAPTCHA was implemented.
-- Weak password allowed quick compromise.
+Screenshot: HTTP GET Attack
+markdown
+![HTTP GET Brute Force](screenshots/http_get.jpg)
+Command Used
+bash
+hydra -l admin -P /usr/share/wordlists/rockyou.txt <target-ip> http-get /dvwa/login.php
+Result
+Hydra successfully identified valid credentials for the HTTP login form, demonstrating how weak passwords can be quickly discovered through automated brute forcing.
 
-## Defensive Recommendations
-- Enforce strong password policies.
-- Implement account lockout after repeated failures.
-- Add CAPTCHA or MFA to login forms.
-- Monitor logs for repeated login attempts.
-- Use WAF rules to detect brute-force patterns.
+2. FTP Brute Force Attack
+Hydra can also brute‑force FTP login credentials using the ftp module.
 
-## Screenshots
-Screenshots for this lab are located in:
-`/screenshots/http-get/`
-# Hydra SSH Brute Force Attack
+Screenshot: FTP Brute Force
+markdown
+![FTP Brute Force](screenshots/ftp_brute_force.jpg)
+Command Used
+bash
+hydra -l msfadmin -P /usr/share/wordlists/rockyou.txt ftp://<target-ip>
+Result
+Hydra successfully authenticated to the FTP service using discovered credentials, confirming the presence of weak password security on the target system.
 
-## Objective
-Use Hydra to perform a brute‑force attack against an SSH service to identify weak or guessable credentials.
+Commands Summary
+Code
+hydra -l admin -P /usr/share/wordlists/rockyou.txt <target-ip> http-get /dvwa/login.php
+hydra -l msfadmin -P /usr/share/wordlists/rockyou.txt ftp://<target-ip>
+Findings
+The HTTP login form was vulnerable to brute‑force attacks due to weak credentials.
 
-## Target
-- Service: SSH (port 22)
-- Username: testuser (example)
-- Authentication method: password-based login
+The FTP service also used weak credentials, allowing unauthorized access.
 
-## Command Used
+Hydra efficiently identified valid username/password combinations for both services.
 
-## Methodology
-1. Confirmed SSH service was running and reachable on port 22.
-2. Identified a valid username ("testuser") through enumeration or prior knowledge.
-3. Selected the rockyou.txt wordlist for password attempts.
-4. Executed Hydra to systematically test each password.
-5. Observed Hydra’s output for successful authentication messages.
+These findings highlight the importance of strong password policies and rate‑limiting mechanisms to prevent brute‑force attacks.
 
-## Output (Sanitized)
-- Hydra reports a successful login when valid credentials are found.
-- Example success line:
-  - `[22][ssh] host: <TARGET-IP>   login: testuser   password: <FOUND-PASSWORD>`
-
-## Findings
-- SSH allowed unlimited authentication attempts.
-- Password complexity was weak and easily brute‑forced.
-- No intrusion prevention tools (e.g., fail2ban) were enabled.
-
-## Defensive Recommendations
-- Disable password authentication and require SSH keys.
-- Enable fail2ban or similar tools to block repeated failed attempts.
-- Restrict SSH access by IP address or VPN.
-- Enforce strong password policies.
-- Changing the default SSH port provides only minor obfuscation, not real security.
-
-## Screenshots
-Screenshots for this lab are located in:
-`/screenshots/ssh/`
-# Hydra FTP Brute Force Attack
-
-## Objective
-Use Hydra to perform a brute‑force attack against an FTP service to identify weak or guessable credentials.
-
-## Target
-- Service: FTP (port 21)
-- Username: ftpuser (example)
-- Authentication method: password-based login
-
-## Command Used
-
-## Methodology
-1. Verified that the FTP service was running and accessible on port 21.
-2. Identified a valid username ("ftpuser") through enumeration or prior knowledge.
-3. Selected the rockyou.txt wordlist for password attempts.
-4. Executed Hydra to test each password against the FTP login.
-5. Monitored Hydra’s output for successful authentication messages.
-
-## Output (Sanitized)
-- Hydra reports a successful login when valid credentials are found.
-- Example success line:
-  - `[21][ftp] host: <TARGET-IP>   login: ftpuser   password: <FOUND-PASSWORD>`
-
-## Findings
-- FTP allowed unlimited authentication attempts.
-- Weak password enabled quick compromise.
-- No intrusion detection or rate limiting was present.
-
-## Defensive Recommendations
-- Disable FTP entirely; use SFTP or FTPS instead.
-- Enforce strong password policies.
-- Restrict FTP access by IP or VPN.
-- Enable logging and monitor for repeated failed login attempts.
-- Remove anonymous or legacy accounts.
-
-## Screenshots
-Screenshots for this lab are located in:
-`/screenshots/ftp/`
-# Wordlists Used in Hydra Attacks
-
-## Primary Wordlist
-- **rockyou.txt**
-  - Location: /usr/share/wordlists/rockyou.txt
-  - Size: ~14 million passwords
-  - Source: Extracted from a real-world data breach (commonly used in penetration testing)
-
-## Why This Wordlist Was Used
-- Contains real-world passwords frequently used by users
-- High success rate in brute-force and password auditing scenarios
-- Standard wordlist included in most penetration testing distributions (e.g., Kali Linux)
-- Ideal for demonstrating Hydra’s brute-force capabilities in a controlled lab environment
-
-## Notes
-- Wordlists were used **only** in an isolated, legal lab environment.
-- No real systems, accounts, or unauthorized targets were tested.
+Conclusion
+This lab demonstrates how Hydra can be used to perform brute‑force attacks against multiple services, including HTTP and FTP. By documenting the methodology, commands, and results, this exercise reinforces my understanding of offensive security techniques and the importance of securing authentication mechanisms.
