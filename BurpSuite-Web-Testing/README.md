@@ -45,23 +45,15 @@ This lab demonstrates the use of **Burp Suite Community Edition** to intercept, 
 - Observed error messages and validation gaps
 - Documented potential vulnerabilities
 
----
-
 ## Screenshots
 All screenshots are stored in:
-### 1. Configure Browser Proxy
-![Configure Browser Proxy](screenshots/1_Configure%20Browser_Proxy.png)
+![Configure Browser Proxy](screenshots/1_Configure_Browser_Proxy.jpg)
 
-### 2. Intercepting Requests
-![Intercepting Requests](screenshots/2_Intercepting_Requests.png)
+![Interpreting Requests](screenshots/2_Interpreting_Requests.jpg)
 
-### 3. Manipulating Requests
-![Manipulating Requests](screenshots/3_Manipulating_Requests.png)
+![Manipulating Requests](screenshots/3_Manipulating_Requests.jpg)
 
-### 4. Analyzing Responses
-![Analyzing Responses](screenshots/4_Analyzing_Responses.png)
-
-
+![Analyzing Responses](screenshots/4_Analyzing_Responses.jpg)
 
 Screenshots include:
 - Proxy configuration
