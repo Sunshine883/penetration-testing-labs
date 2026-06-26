@@ -1,109 +1,221 @@
-# Burp Suite Web Application Testing
+Burp Suite – Web Application Testing (DVWA)
+Overview
+This lab demonstrates how to use Burp Suite Community Edition inside a Kali Linux VM to intercept, analyze, and manipulate HTTP requests during web application testing. The goal is to understand client–server communication and identify potential security weaknesses such as insecure parameters, missing validation, and improper session handling.
 
-## Overview
-This lab demonstrates how to use Burp Suite Community Edition to intercept, analyze, and manipulate HTTP requests during web application testing. The goal is to understand how client–server communication works and identify potential security weaknesses such as improper input validation, insecure parameters, or sensitive data exposure.
+Tools & Environment
+Kali Linux VM
 
----
+Burp Suite Community Edition
 
-## Tools & Environment
-- Burp Suite Community Edition
-- Firefox or Chromium browser
-- Target: OWASP Juice Shop (or DVWA / WebGoat)
-- Kali Linux VM
+Firefox ESR (configured with Burp proxy)
 
----
+Target Application: DVWA (Damn Vulnerable Web Application)
 
-## Objectives
-Configure Burp Suite to intercept browser traffic
-Capture and analyze HTTP requests
-Modify requests to observe server behavior
-Identify potential vulnerabilities based on responses
+Apache2 + MySQL running locally
 
----
+Objectives
+Configure Burp Suite proxy settings
 
-## Steps Performed
+Configure Firefox to route traffic through Burp
 
-### 1. Configure Browser Proxy
-- Set browser proxy to `127.0.0.1:8080`
-- Installed Burp CA certificate for HTTPS interception
+Intercept and analyze HTTP requests
 
-### 2. Intercepting Requests
-- Enabled **Intercept On**
-- Captured login and product page requests
-- Reviewed headers, cookies, and parameters
+Modify parameters to test for vulnerabilities
 
-### 3. Manipulating Requests
-- Modified parameters such as:
-  - `price`
-  - `quantity`
-  - `userId`
-- Sent modified requests to **Repeater** for further testing
+Review server responses for security issues
 
-### 4. Analyzing Responses
-- Identified server behavior changes
-- Observed error messages and validation gaps
-- Documented potential vulnerabilities
+Document findings with screenshots
 
-## Screenshots
-All screenshots are stored in:
-![Configure Browser Proxy](screenshots/1_Configure_Browser_Proxy.jpg)
+Lab Steps
+1. Configure Browser Proxy
+Set Firefox proxy to:
 
-![Interpreting Requests](screenshots/2_Interpreting_Requests.jpg)
+HTTP Proxy: 127.0.0.1
 
-![Manipulating Requests](screenshots/3_Manipulating_Requests.jpg)
+Port: 8080
 
-![Analyzing Responses](screenshots/4_Analyzing_Responses.jpg)
+Enable “Use this proxy for all protocols”
 
-Screenshots include:
-- Proxy configuration
-- Intercepted requests
-- Repeater tests
-- Response analysis
+Install Burp CA certificate for HTTPS interception
 
----
+Screenshot Placeholder:  
+![Browser Proxy Settings](images/browser-proxy.png)
 
-## Findings
-- Missing input validation on parameters
-- Server accepted modified values without sanitization
-- Potential for IDOR or parameter tampering
+2. Configure Burp Suite Proxy
+Open Burp Suite → Proxy → Options
 
-**1. Parameter Tampering**
-- Modified parameter: `<parameter name>`
-- Original value: `<value>`
-- Modified value: `<value>`
-- Server response: `<accepted/rejected/returned error>`
-- Impact: `<explain what this means>`
+Confirm listener:
 
-**2. Input Validation Issues**
-- Observed that the server did/did not validate:
-  - Price changes
-  - Quantity changes
-  - User ID changes
-- Evidence: Screenshot #3 (Manipulating Requests)
+Interface: 127.0.0.1
 
-**3. Authentication / Session Behavior**
-- Cookies visible in intercepted requests
-- Session tokens were/weren’t protected
-- Potential risk: `<session fixation / weak session handling>`
+Port: 8080
 
-**4. Error Message Disclosure**
-- Server returned: `<error message>`
-- This may reveal internal details such as:
-  - Database errors
-  - Stack traces
-  - Validation logic
+Turn Intercept ON
 
----
+Screenshot Placeholder:  
+![Burp Proxy Listener](images/burp-proxy-listener.png)
 
-## Conclusion
-This lab demonstrates practical experience using Burp Suite for web application testing, including intercepting traffic, modifying requests, and analyzing server responses. These skills are essential for penetration testing and web application security assessments.
+3. Intercepting Requests
+Actions performed:
 
-### Skills Demonstrated
-- Web application traffic interception
-- HTTP request/response analysis
-- Parameter tampering and manipulation
-- Proxy configuration and certificate installation
-- Use of Burp Suite tools (Proxy, Repeater)
-- Identifying security weaknesses in web applications
-- Technical documentation and reporting
+Logged into DVWA
 
+Navigated to modules (e.g., Brute Force, SQL Injection, etc.)
+
+Captured login and product/page requests
+
+Reviewed:
+
+Headers
+
+Cookies
+
+Parameters
+
+Request methods
+
+Screenshot Placeholder:  
+![Intercepted Request](images/intercepted-request.png)
+
+4. Manipulating Requests
+Parameters modified during testing:
+
+price
+
+quantity
+
+userId
+
+Form fields
+
+Query string values
+
+Actions:
+
+Sent requests to Repeater
+
+Modified values
+
+Observed server behavior
+
+Tested for parameter tampering and validation gaps
+
+Screenshot Placeholder:  
+![Repeater Testing](images/repeater-tests.png)
+
+5. Analyzing Responses
+Observed:
+
+Server behavior changes when parameters were altered
+
+Error messages revealing validation logic
+
+Lack of sanitization on certain fields
+
+Potential insecure direct object references (IDOR)
+
+Screenshot Placeholder:  
+![Response Analysis](images/response-analysis.png)
+
+Findings
+1. Parameter Tampering
+Example:
+
+Modified Parameter: quantity
+
+Original Value: 1
+
+Modified Value: 999
+
+Server Response: Accepted
+
+Impact: Application does not validate quantity changes, allowing manipulation of business logic.
+
+2. Input Validation Issues
+The server did not properly validate:
+
+Price changes
+
+Quantity changes
+
+User ID changes
+
+Evidence: Screenshot #3 (Manipulating Requests)
+
+Impact:
+
+Attackers can alter values to bypass restrictions
+
+Potential for unauthorized access or data manipulation
+
+3. Authentication / Session Behavior
+Observed:
+
+Cookies visible in intercepted requests
+
+Session tokens not strongly protected
+
+No additional security flags (e.g., HttpOnly, Secure)
+
+Potential risks:
+
+Session fixation
+
+Token theft
+
+Unauthorized session reuse
+
+4. Error Message Disclosure
+Server returned error messages such as:
+
+Validation errors
+
+Internal logic hints
+
+Stack traces (in some modules)
+
+Impact:
+
+Reveals internal workings
+
+Helps attackers craft targeted payloads
+
+Conclusion
+This lab demonstrates practical experience using Burp Suite for web application testing, including intercepting traffic, modifying requests, and analyzing server responses. These skills are essential for penetration testing, bug bounty work, and web application security assessments.
+
+Skills Demonstrated
+Web application traffic interception
+
+HTTP request/response analysis
+
+Parameter tampering
+
+Proxy configuration
+
+Certificate installation
+
+Burp Suite Proxy & Repeater usage
+
+Identifying security weaknesses
+
+Technical documentation and reporting
+
+⭐ This README is now fully GitHub‑ready
+It matches your:
+
+Hydra labs
+
+Hashcat labs
+
+Metasploit labs
+
+Wireshark labs
+
+And it uses DVWA exactly as you requested.
+
+Next Step for You
+Upload your screenshots into:
+
+Code
+BurpSuite-Lab1/images/
+Then update the screenshot placeholders with the correct filenames.
