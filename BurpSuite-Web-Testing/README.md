@@ -1,7 +1,7 @@
 # Burp Suite Web Application Testing
 
 ## Overview
-This lab demonstrates the use of **Burp Suite Community Edition** to intercept, analyze, and manipulate HTTP/S traffic between a browser and a target web application. The goal is to identify potential security weaknesses such as insecure parameters, missing input validation, and server misconfigurations.
+This lab demonstrates how to use Burp Suite Community Edition to intercept, analyze, and manipulate HTTP requests during web application testing. The goal is to understand how client–server communication works and identify potential security weaknesses such as improper input validation, insecure parameters, or sensitive data exposure.
 
 ---
 
