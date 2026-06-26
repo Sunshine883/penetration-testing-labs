@@ -14,11 +14,10 @@ This lab demonstrates how to use Burp Suite Community Edition to intercept, anal
 ---
 
 ## Objectives
-- Configure Burp Suite proxy settings
-- Intercept and analyze HTTP requests
-- Modify parameters to test for vulnerabilities
-- Review server responses for security issues
-- Document findings with screenshots
+Configure Burp Suite to intercept browser traffic
+Capture and analyze HTTP requests
+Modify requests to observe server behavior
+Identify potential vulnerabilities based on responses
 
 ---
 
