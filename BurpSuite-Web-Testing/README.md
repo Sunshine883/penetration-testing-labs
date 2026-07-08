@@ -42,21 +42,7 @@ Screenshot Placeholder:
 
 ![Configure Browser Proxy](screenshots/1_Configure_Browser_Proxy.jpg)
 
-2. Configure Burp Suite Proxy
-Open Burp Suite → Proxy → Options
-
-Confirm listener:
-
-Interface: 127.0.0.1
-
-Port: 8080
-
-Turn Intercept ON
-
-Screenshot Placeholder:  
-![Burp Proxy Listener](images/burp-proxy-listener.png)
-
-3. Intercepting Requests
+2. Intercepting Requests
 Actions performed:
 
 Logged into DVWA
@@ -76,9 +62,10 @@ Parameters
 Request methods
 
 Screenshot Placeholder:  
-![Intercepted Request](images/intercepted-request.png)
+![Interpreting Requests](screenshots/2_Interpreting_Requests.jpg)
 
-4. Manipulating Requests
+
+3. Manipulating Requests
 Parameters modified during testing:
 
 price
@@ -102,9 +89,11 @@ Observed server behavior
 Tested for parameter tampering and validation gaps
 
 Screenshot Placeholder:  
-![Repeater Testing](images/repeater-tests.png)
 
-5. Analyzing Responses
+![Manipulating Requests](screenshots/3_Manipulating_Requests.jpg)
+
+
+4. Analyzing Responses
 Observed:
 
 Server behavior changes when parameters were altered
@@ -116,7 +105,8 @@ Lack of sanitization on certain fields
 Potential insecure direct object references (IDOR)
 
 Screenshot Placeholder:  
-![Response Analysis](images/response-analysis.png)
+![Analyzing Responses](screenshots/4_Analyzing_Responses.jpg)
+
 
 Findings
 1. Parameter Tampering
@@ -201,22 +191,4 @@ Identifying security weaknesses
 
 Technical documentation and reporting
 
-⭐ This README is now fully GitHub‑ready
-It matches your:
 
-Hydra labs
-
-Hashcat labs
-
-Metasploit labs
-
-Wireshark labs
-
-And it uses DVWA exactly as you requested.
-
-Next Step for You
-Upload your screenshots into:
-
-Code
-BurpSuite-Lab1/images/
-Then update the screenshot placeholders with the correct filenames.
