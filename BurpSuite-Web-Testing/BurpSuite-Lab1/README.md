@@ -1,98 +1,166 @@
-# BurpSuite Lab 1 – SQL Injection Testing (DVWA)
+BurpSuite Lab 1 — DVWA Interception & SQL Injection Testing
+Overview
+This lab demonstrates how to configure DVWA (Damn Vulnerable Web Application) and Burp Suite Community Edition to intercept, analyze, and manipulate HTTP traffic.
+You then use Burp Suite’s Proxy, HTTP History, and Repeater tools to perform SQL Injection attacks against DVWA.
 
-This lab demonstrates how Burp Suite Community Edition was used to intercept, analyze, and manipulate HTTP requests while performing SQL Injection attacks against the Damn Vulnerable Web Application (DVWA).  
-The goal is to understand how insecure input handling allows attackers to inject SQL commands and retrieve unauthorized data from a backend database.
+This lab covers:
 
----
+Setting up DVWA on Kali Linux
 
-## Lab Environment
+Configuring Apache and MySQL
 
-- Kali Linux VM  
-- Burp Suite Community Edition  
-- Firefox ESR configured with Burp proxy  
-- DVWA (Damn Vulnerable Web Application) with Security Level set to **Low**
+Editing DVWA configuration
 
----
+Launching Burp Suite
 
-## Screenshots and Explanations
+Intercepting DVWA login traffic
 
-> Note: Replace `lab1-img01.png`, `lab1-img02.png`, etc. with your actual screenshot filenames once you upload them.
+Sending requests to Repeater
 
----
+Performing SQL Injection
 
-### 1. DVWA Security Level Set to Low
+Analyzing server responses
 
-![DVWA Security Low](images/lab1-img01.png)
+Tools & Environment
+Kali Linux (VirtualBox VM)
 
-**What this shows:**  
-DVWA is configured to **Low** security, meaning the application does not sanitize user input.
+Apache2 + MySQL/MariaDB
 
-**What it means:**  
-This mode intentionally allows vulnerabilities like SQL injection so you can safely practice exploitation techniques.
+DVWA
 
----
+Burp Suite Community Edition
 
-### 2. Burp Suite Intercepting the Login Request
+Firefox/Chromium browser
 
-![Burp Intercept Login](images/lab1-img02.png)
+1. DVWA Setup
+1.1 Update Kali
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
-**What this shows:**  
-Burp Suite captured the HTTP POST request sent from the browser to DVWA’s login page, including headers, cookies, and the POST body.
+Updated package lists to ensure DVWA dependencies are current.
 
-**What it means:**  
-You successfully intercepted the raw HTTP request. This is the foundation for modifying and replaying requests during web application testing.
+1.2 Install DVWA
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
----
+Confirmed DVWA is installed on the system.
 
-### 3. Burp Suite Repeater – SQL Injection Attempt on Login
+1.3 Start Apache & MySQL Services
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]  
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
-![Burp Repeater Login SQLi](images/lab1-img03.png)
+Apache2 and MySQL services must be running for DVWA to function.
 
-**Example payload used:**
+1.4 Configure DVWA Database
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
-```text
-username=' OR '1'='1' -- -
-password=abc
+Logged into MariaDB and verified the DVWA database exists.
 
-What this shows:  
-I attempted to bypass authentication by injecting SQL into the login request.
+1.5 Edit DVWA Configuration File
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]  
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
-What it means:  
-In newer DVWA versions, the login page is not vulnerable to SQL injection, even at Low security. This demonstrates that not all inputs are exploitable, and understanding backend logic matters.
+Updated DVWA’s config.inc.php to ensure correct database credentials and server settings.
 
-4. DVWA SQL Injection Page – Basic Injection
+1.6 Restart Apache
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Restarted Apache to apply configuration changes.
+
+2. Burp Suite Setup
+2.1 Launch Burp Suite
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Selected Temporary Project and Burp Defaults.
+
+2.2 Proxy Intercept
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]  
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Enabled/disabled intercept to control traffic flow between browser and DVWA.
+
+3. DVWA Interaction
+3.1 DVWA Login Page
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Navigated to DVWA at http://127.0.0.1/dvwa/login.php.
+
+3.2 DVWA Security Level
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Set DVWA security level to Low to allow SQL injection testing.
+
+4. Intercepting DVWA Traffic
+4.1 HTTP History
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Captured GET and POST requests including:
+
+/dvwa/login.php
+
+/dvwa/index.php
+
+Cookies: PHPSESSID, security=low
+
+This confirms Burp Suite is successfully intercepting DVWA traffic.
+
+5. SQL Injection Testing
+5.1 Send Login Request to Repeater
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Modified the login request to include SQL injection payloads.
+
+Example payload:
+
+Code
+username=admin' OR '1'='1&password=test
+5.2 Analyze Server Response
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+The server returned a valid HTML response, indicating the payload was processed.
+
+5.3 SQL Injection in DVWA
+Boolean-based SQLi
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+
+Payload:
+
+Code
 1 OR 1=1
+Result:
 
-What this shows:  
-Entering 1 OR 1=1 in the User ID field returns the admin user.
-
-What it means:  
-This is a basic SQL injection.
-OR 1=1 is always true, so the database returns a row even though the input is not a valid ID.
-
-5. DVWA SQL Injection Page – UNION Injection
-1 UNION SELECT 1,2,3 --
-
-What this shows:  
-DVWA accepts the UNION query and still returns data.
-
-What it means:  
-I performed a UNION-based SQL injection, combining results from two SELECT statements. This proves I can inject additional SQL into the application’s query.
-
-6. Successful SQL Injection Output (Admin Data)
 First name: admin
+
 Surname: admin
 
-What it means:  
-I successfully exploited the SQL injection vulnerability and retrieved data directly from the database. This demonstrates how insecure input handling can expose sensitive information.
+UNION-based SQLi
+[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
 
-What I Learned in This Lab
-How Burp Suite intercepts and modifies HTTP requests
+Payload:
 
-How basic SQL injection works using conditions like OR 1=1
+Code
+1 UNION SELECT 1,2,3 --
+Result:
 
-How UNION-based SQL injection can combine multiple queries
+First name: admin
 
-Why some pages (like DVWA’s login) are not vulnerable even at Low security
+Surname: admin
 
-How to document penetration testing steps clearly for a portfolio
+This confirms DVWA is vulnerable and Burp Suite successfully manipulated the request.
+
+6. Conclusion
+In this lab, you:
+
+Installed and configured DVWA
+
+Set up Apache and MySQL
+
+Edited DVWA configuration
+
+Launched Burp Suite
+
+Intercepted DVWA traffic
+
+Used Repeater to modify and resend requests
+
+Successfully exploited SQL Injection vulnerabilities
+
+This demonstrates how Burp Suite can be used to analyze and manipulate web application traffic and identify critical vulnerabilities.
