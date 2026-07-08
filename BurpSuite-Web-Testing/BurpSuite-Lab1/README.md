@@ -8,36 +8,36 @@ This lab demonstrates how to use **Burp Suite Community Edition** with **DVWA (D
 # 1. DVWA Configuration
 
 ## 1.1 Change DVWA Security Level to Low
-![Change DVWA Security Level](Screenshots/Change_DVWA_security_to_low.jpg)
+![Change DVWA Security Level](lab-screenshots/Change_DVWA_security_to_low.jpg)
 
 ---
 
 ## 1.2 DVWA Login Page
-![DVWA Login](Screenshots/DVWA_login.jpg)
+![DVWA Login](lab-screenshots/DVWA_login.jpg)
 
 ---
 
 # 2. SQL Injection Testing
 
 ## 2.1 SQL Injection (Boolean-Based)
-![SQL Injection](Screenshots/SQL_Injection.jpg)
+![SQL Injection](lab-screenshots/SQL_Injection.jpg)
 
 ---
 
 ## 2.2 SQL Injection (UNION-Based)
-![SQL UNION](Screenshots/SQL_UNION.jpg)
+![SQL UNION](lab-screenshots/SQL_UNION.jpg)
 
 ---
 
 # 3. Burp Suite Repeater Exploitation
 
 ## 3.1 Modified Repeater Request
-![Modified Repeater](Screenshots/Modified_repeater.jpg)
+![Modified Repeater](lab-screenshots/Modified_repeater.jpg)
 
 ---
 
 ## 3.2 Server Response to Modified Request
-![Server Response](Screenshots/Server_response_to_modified_repeater_request.jpg)
+![Server Response](lab-screenshots/Server_response_to_modified_repeater_request.jpg)
 
 ---
 
