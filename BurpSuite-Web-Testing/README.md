@@ -39,7 +39,8 @@ Enable “Use this proxy for all protocols”
 Install Burp CA certificate for HTTPS interception
 
 Screenshot Placeholder:  
-![Screenshots](screenshots/1_Configure_Browser_Proxy.jpg.jpg)
+
+![Configure Browser Proxy](screenshots/1_Configure_Browser_Proxy.jpg)
 
 2. Configure Burp Suite Proxy
 Open Burp Suite → Proxy → Options
