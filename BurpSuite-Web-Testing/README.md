@@ -29,7 +29,7 @@ This screenshot shows Burp Suite launching in Community Edition. Starting Burp S
 
 
 
-Here you selected the default Burp Suite configuration. This ensures consistent behavior across tools such as Proxy, Repeater, and Intruder.
+I selected the default Burp Suite configuration. This ensures consistent behavior across tools such as Proxy, Repeater, and Intruder.
 
 ---
 
@@ -99,7 +99,7 @@ This screenshot shows how Burp Suite displays HTTP request details. Understandin
 
 
 
-Here you modified a request before sending it to the server. This demonstrates how Burp Suite can be used to test input validation and exploit insecure parameters.
+I modified a request before sending it to the server. This demonstrates how Burp Suite can be used to test input validation and exploit insecure parameters.
 
 ---
 
