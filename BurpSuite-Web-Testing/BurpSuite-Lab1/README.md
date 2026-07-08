@@ -37,7 +37,7 @@ This screenshot shows the DVWA login page. Logging in generates a POST request t
 
 
 
-Here you performed a basic SQL injection attack by manipulating user input. The screenshot demonstrates how DVWA responds when vulnerable to SQL injection.
+Here I performed a basic SQL injection attack by manipulating user input. The screenshot demonstrates how DVWA responds when vulnerable to SQL injection.
 
 
 
