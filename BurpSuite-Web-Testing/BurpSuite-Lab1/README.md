@@ -14,7 +14,7 @@ This lab demonstrates how to use **Burp Suite Community Edition** with **DVWA (D
 
 
 
-DVWA’s security level is set to “Low” to intentionally disable security controls. This allows you to practice exploiting vulnerabilities such as SQL injection and command injection.
+DVWA’s security level is set to “Low” to intentionally disable security controls. This allows me to practice exploiting vulnerabilities such as SQL injection and command injection.
 
 
 ## 1.2 DVWA Login Page
