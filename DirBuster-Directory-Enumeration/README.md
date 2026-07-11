@@ -1,121 +1,125 @@
-# DirBuster Directory Enumeration
 
-## Overview
-This lab demonstrates the use of **DirBuster**, a directory and file brute‑forcing tool, to discover hidden paths, files, and resources on a target web server. Directory enumeration is a critical phase in web application penetration testing, helping identify attack surfaces not directly linked from the main site.
+📘 DirBuster Lab — README.md
+🔎 Overview
+This lab demonstrates directory and file enumeration against DVWA (Damn Vulnerable Web Application) using OWASP DirBuster on Kali Linux. You configured your environment, validated services, executed a brute‑force scan, and documented the results.
 
----
+📸 Screenshots & Explanations
+1️⃣ Update DirBuster
+Filename: 1_Update_Dirbuster  
+What you did:  
+Ran sudo apt update && sudo apt install dirbuster to ensure DirBuster was installed and current.
 
-## Tools & Environment
-- DirBuster (OWASP)
-- Kali Linux VM
-- Target: OWASP Juice Shop, DVWA, or any test web server
-- Wordlists: common.txt, directory-list-2.3-medium.txt, or custom lists
+Why:  
+Updating packages prevents dependency issues and confirms the tool is ready for use.
 
----
+Meaning:  
+Your Kali environment is properly prepared for web directory enumeration.
 
-## Objectives
-- Configure DirBuster for directory enumeration
-- Run brute‑force scans using different wordlists
-- Identify hidden directories and files
-- Analyze discovered paths for potential vulnerabilities
-- Document results with screenshots
+2️⃣ Launch DirBuster
+Filename: 2_Launch_Dirbuster  
+What you did:  
+Opened the DirBuster GUI inside your Kali VM.
 
----
+Why:  
+The GUI provides an intuitive interface for configuring scan parameters, wordlists, recursion, and threads.
 
-## Steps Performed
+Meaning:  
+You are entering the configuration phase of the enumeration process.
 
-### 1. Configure Target URL
-- Entered the target web application URL
-- Selected appropriate wordlist
-- Chose scanning method (GET/HEAD)
+3️⃣ Enter Target URL
+Filename: 3_Enter_httpaddress_in_TargetURL  
+What you did:  
+Set the target to:
+http://127.0.0.1/dvwa/
 
-### 2. Running the Scan
-- Initiated directory brute‑forcing
-- Monitored progress and thread activity
-- Observed discovered directories in real time
+Why:  
+DVWA is hosted locally under /var/www/html/dvwa. Using localhost ensures fast, reliable scanning.
 
-### 3. Reviewing Results
-- Identified hidden directories and files
-- Noted potential sensitive paths (e.g., `/admin`, `/backup`, `/config`)
-- Exported or documented results for further testing
+Meaning:  
+DirBuster will enumerate directories and files inside the DVWA web application.
 
----
+4️⃣ Select Wordlists
+Filename: 4_Select_Wordlists  
+What you did:  
+Selected the wordlist:
+directory-list-2.3-medium.txt  
+Enabled:
 
-## Screenshots
-All screenshots are stored in:
-![Configure Target](screenshots/1_Configure_Target.jpg)
+Brute Force Dirs
 
-![Run Scan](screenshots/2_Run_Scan.jpg)
+Brute Force Files
 
-![Review Results](screenshots/3_Review_results.jpg)
+Recursive scanning
 
-![Directory Enumeration](screenshots/Directory_enumeration.jpg)
+10 threads
 
+Why:  
+The medium wordlist balances speed and thoroughness. Recursion ensures deeper directory discovery.
 
-DirBuster – Directory Enumeration Lab (Full Walkthrough)
-1
-Launch DirBuster
-Setup
-Start the tool inside your Kali VM to prepare for directory enumeration.
+Meaning:  
+Your scan is configured for realistic penetration testing, targeting both directories and files.
 
-Open Kali Linux
+5️⃣ Start Wordlist Scan
+Filename: 5_start_Wordlists  
+What you did:  
+Clicked Start to begin brute‑forcing directories and files.
 
-Navigate to Applications → Web Application Analysis → DirBuster
+Why:  
+This initiates the enumeration process, sending thousands of HTTP requests to DVWA.
 
-Confirm the GUI loads successfully
+Meaning:  
+DirBuster is actively probing DVWA for hidden paths.
 
-2
-Configure the Target URL
-Required
-Set the web application you want to enumerate.
+5️⃣ (b) Start MariaDB
+Filename: 5_start_MariaDB  
+What you did:  
+Checked and started the MariaDB service using systemctl.
 
-In the Target URL field, enter your DVWA or test target (e.g., http://127.0.0.1/dvwa/)
+Why:  
+DVWA requires a running database backend. Without MariaDB, DVWA may fail or redirect, affecting DirBuster’s ability to enumerate directories.
 
-Ensure the target is reachable in your browser
+Meaning:  
+Your DVWA environment is fully operational, ensuring accurate scan results.
 
-Leave Port at default unless your target uses a custom port
+6️⃣ DirBuster Results
+Filename: 6_Dirbuster_results  
+What you did:  
+Monitored the live scan results showing discovered directories such as:
 
-3
-Select Wordlist and Scan Type
-Important
-Choose the dictionary and scanning method to control enumeration depth.
+/dvwa/docs/graphics/
 
-Under Scan Type, select Directory brute force
+/dvwa/tests/
 
-Choose a wordlist: /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+/icons/
 
-Keep File extensions empty for a pure directory scan
+/dvwa/vulnerabilities/...
 
-4
-Start the Scan
-Run
-Begin brute forcing directories on the target web server.
+Why:  
+Watching the scan helps verify performance, recursion, and successful directory discovery.
 
-Click Start to begin enumeration
+Meaning:  
+DirBuster successfully enumerated multiple hidden directories and files inside DVWA, proving your configuration was correct.
 
-Watch the Running Threads and Found Items counters update
+7️⃣ Configure Firefox — No Proxy
+Filename: 7_Configure_Firefox_noProxy  
+What you did:  
+Set Firefox to No Proxy.
 
-Allow the scan to run until meaningful results appear
+Why:  
+DVWA must be reachable directly on port 80. If Firefox is still using Burp Suite’s proxy (port 8080), DirBuster cannot reach DVWA and will fall back to scanning /.
 
-5
-Review Discovered Directories
-Analysis
-Analyze the results to identify hidden or sensitive directories.
+Meaning:  
+Disabling the proxy ensures DVWA is accessible directly, allowing DirBuster to enumerate the correct target.
 
-Look for directories such as /admin/, /uploads/, /config/, /phpmyadmin/
+🏁 Final Summary
+This lab demonstrates your ability to:
 
-Double‑click entries to open them in the browser
+Configure a vulnerable web app environment
 
-Note any directories that expose sensitive functionality
+Validate backend services (MariaDB)
 
-6
-Document Findings for GitHub
-Recommended
-Record your results clearly for your portfolio.
+Use DirBuster for directory and file brute‑forcing
 
-Capture screenshots of configuration, scan progress, and results
+Interpret scan results
 
-Save them into your DirBuster-Directory-Enumeration folder
-
-Update your README.md with a summary of findings and screenshot links
-
+Document your workflow professionally
