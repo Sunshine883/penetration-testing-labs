@@ -113,4 +113,47 @@ DVWA must be reachable directly on port 80.
 **Meaning:**  
 Disabling the proxy ensures DirBuster scans the correct target.
 
+##Tools Used
+
+### **Kali Linux**
+Used as the penetration testing environment and host for DVWA and DirBuster.
+
+### **OWASP DirBuster**
+Primary tool used for directory and file brute‑forcing against the DVWA web application.
+
+### **DVWA (Damn Vulnerable Web Application)**
+Target application intentionally designed with security flaws for training and testing.
+
+### **MariaDB**
+Database backend required for DVWA to function properly.
+
+### **Firefox Browser**
+Used to verify DVWA accessibility and ensure proxy settings were correctly configured.
+
+### **Linux Terminal**
+Used for package updates, service management, and environment validation.
+
+##Lessons Learned
+
+### **1. Importance of Proper Environment Setup**
+DirBuster relies on the target application being fully functional. Ensuring MariaDB was running prevented false errors and incomplete scans.
+
+### **2. Wordlist Selection Matters**
+Using the medium wordlist provided a strong balance between speed and thoroughness. Larger wordlists can find more directories but significantly increase scan time.
+
+### **3. Proxy Settings Can Affect Scans**
+Firefox proxy misconfiguration can cause DirBuster to scan the wrong location or fail to reach DVWA. Setting “No Proxy” ensured accurate enumeration.
+
+### **4. Recursive Scanning Reveals Deep Structure**
+Enabling recursion allowed DirBuster to discover nested directories such as `/dvwa/docs/graphics/` and `/dvwa/vulnerabilities/`.
+
+### **5. Thread Count Impacts Performance**
+Using 10 threads increased scan speed without overwhelming the local DVWA server.
+
+### **6. Real‑Time Monitoring Helps Validate Scan Behavior**
+Watching request speed, queue size, and discovered paths helped confirm that DirBuster was functioning correctly and exploring the expected directory structure.
+
+### **7. Documentation Is Part of the Skill**
+Capturing screenshots and writing a clear README demonstrates professionalism and helps build a strong cybersecurity portfolio.
+
 
