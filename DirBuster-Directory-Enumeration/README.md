@@ -1,9 +1,9 @@
 
-📘 DirBuster Lab — README.md
-🔎 Overview
+DirBuster Lab — README.md
+Overview
 This lab demonstrates directory and file enumeration against DVWA (Damn Vulnerable Web Application) using OWASP DirBuster on Kali Linux. You configured your environment, validated services, executed a brute‑force scan, and documented the results.
 
-📸 Screenshots & Explanations
+Screenshots & Explanations
 1️⃣ Update DirBuster
 Filename: 1_Update_Dirbuster  
 What you did:  
