@@ -1,125 +1,129 @@
-
-DirBuster Lab — README.md
-Overview
+DirBuster Lab — Overview
 This lab demonstrates directory and file enumeration against DVWA (Damn Vulnerable Web Application) using OWASP DirBuster on Kali Linux. You configured your environment, validated services, executed a brute‑force scan, and documented the results.
 
 Screenshots & Explanations
-1️⃣ Update DirBuster
-Filename: 1_Update_Dirbuster  
-What you did:  
-Ran sudo apt update && sudo apt install dirbuster to ensure DirBuster was installed and current.
 
-Why:  
-Updating packages prevents dependency issues and confirms the tool is ready for use.
+### 1️⃣ Update DirBuster  
+![Update Dirbuster](1_Update_Dirbuster.jpg)
 
-Meaning:  
-Your Kali environment is properly prepared for web directory enumeration.
+**What you did:**  
+Updated package lists and confirmed DirBuster was installed.
 
-2️⃣ Launch DirBuster
-Filename: 2_Launch_Dirbuster  
-What you did:  
-Opened the DirBuster GUI inside your Kali VM.
+**Why:**  
+Ensures the tool is current and avoids dependency issues.
 
-Why:  
-The GUI provides an intuitive interface for configuring scan parameters, wordlists, recursion, and threads.
+**Meaning:**  
+Your Kali environment is ready for directory enumeration.
 
-Meaning:  
+---
+
+### 2️⃣ Launch DirBuster  
+![Launch Dirbuster](2_Launch_Dirbuster.jpg)
+
+**What you did:**  
+Opened the DirBuster GUI.
+
+**Why:**  
+The GUI allows configuration of threads, recursion, wordlists, and scan type.
+
+**Meaning:**  
 You are entering the configuration phase of the enumeration process.
 
-3️⃣ Enter Target URL
-Filename: 3_Enter_httpaddress_in_TargetURL  
-What you did:  
-Set the target to:
-http://127.0.0.1/dvwa/
+---
 
-Why:  
-DVWA is hosted locally under /var/www/html/dvwa. Using localhost ensures fast, reliable scanning.
+### 3️⃣ Enter Target URL  
+![Enter http address in Target URL](3_Enter_httpaddress_in_TargetURL.jpg)
 
-Meaning:  
-DirBuster will enumerate directories and files inside the DVWA web application.
+**What you did:**  
+Set the target to:  
+`http://127.0.0.1/dvwa/`
 
-4️⃣ Select Wordlists
-Filename: 4_Select_Wordlists  
-What you did:  
-Selected the wordlist:
-directory-list-2.3-medium.txt  
-Enabled:
+**Why:**  
+DVWA is hosted locally, making enumeration fast and reliable.
 
-Brute Force Dirs
+**Meaning:**  
+DirBuster will enumerate directories and files inside DVWA.
 
-Brute Force Files
+---
 
-Recursive scanning
+### 4️⃣ Select Wordlists  
+![Select Wordlists](4_Select_Wordlists.jpg)
 
-10 threads
+**What you did:**  
+Selected the medium DirBuster wordlist and enabled:  
+- Brute Force Dirs  
+- Brute Force Files  
+- Recursive scanning  
+- 10 threads
 
-Why:  
-The medium wordlist balances speed and thoroughness. Recursion ensures deeper directory discovery.
+**Why:**  
+Medium wordlist = balanced speed + thoroughness.  
+Recursion = deeper directory discovery.
 
-Meaning:  
-Your scan is configured for realistic penetration testing, targeting both directories and files.
+**Meaning:**  
+Your scan is configured for realistic penetration testing.
 
-5️⃣ Start Wordlist Scan
-Filename: 5_start_Wordlists  
-What you did:  
-Clicked Start to begin brute‑forcing directories and files.
+---
 
-Why:  
-This initiates the enumeration process, sending thousands of HTTP requests to DVWA.
+### 5️⃣ Start Wordlist Scan  
+![Start Wordlists](5_start_Wordlists.jpg)
 
-Meaning:  
+**What you did:**  
+Clicked **Start** to begin brute‑forcing directories and files.
+
+**Why:**  
+This initiates the enumeration process.
+
+**Meaning:**  
 DirBuster is actively probing DVWA for hidden paths.
 
-5️⃣ (b) Start MariaDB
-Filename: 5_start_MariaDB  
-What you did:  
-Checked and started the MariaDB service using systemctl.
+---
 
-Why:  
-DVWA requires a running database backend. Without MariaDB, DVWA may fail or redirect, affecting DirBuster’s ability to enumerate directories.
+### 5️⃣ (b) Start MariaDB  
+![Start MariaDB](5_start_MariaDB.jpg)
 
-Meaning:  
-Your DVWA environment is fully operational, ensuring accurate scan results.
+**What you did:**  
+Checked and started the MariaDB service.
 
-6️⃣ DirBuster Results
-Filename: 6_Dirbuster_results  
-What you did:  
-Monitored the live scan results showing discovered directories such as:
+**Why:**  
+DVWA requires a running database backend.  
+Without MariaDB, DVWA may fail or redirect, affecting DirBuster’s results.
 
-/dvwa/docs/graphics/
+**Meaning:**  
+Your DVWA environment is fully operational.
 
-/dvwa/tests/
+---
 
-/icons/
+### 6️⃣ DirBuster Results  
+![Dirbuster Results](6_Dirbuster_results.jpg)
 
-/dvwa/vulnerabilities/...
+**What you did:**  
+Monitored the live scan results showing discovered directories such as:  
+- `/dvwa/docs/graphics/`  
+- `/dvwa/tests/`  
+- `/icons/`  
+- `/dvwa/vulnerabilities/...`
 
-Why:  
-Watching the scan helps verify performance, recursion, and successful directory discovery.
+**Why:**  
+Verifies recursion, performance, and successful directory discovery.
 
-Meaning:  
-DirBuster successfully enumerated multiple hidden directories and files inside DVWA, proving your configuration was correct.
+**Meaning:**  
+DirBuster successfully enumerated multiple hidden directories and files.
 
-7️⃣ Configure Firefox — No Proxy
-Filename: 7_Configure_Firefox_noProxy  
-What you did:  
-Set Firefox to No Proxy.
+---
 
-Why:  
-DVWA must be reachable directly on port 80. If Firefox is still using Burp Suite’s proxy (port 8080), DirBuster cannot reach DVWA and will fall back to scanning /.
+### 7️⃣ Configure Firefox — No Proxy  
+![Configure Firefox no Proxy](7_Configure_Firefox_noProxy.jpg)
 
-Meaning:  
-Disabling the proxy ensures DVWA is accessible directly, allowing DirBuster to enumerate the correct target.
+**What you did:**  
+Set Firefox to **No Proxy**.
 
-Final Summary
-This lab demonstrates your ability to:
+**Why:**  
+DVWA must be reachable directly on port 80.  
+If Firefox is still using Burp Suite’s proxy, DirBuster may scan the wrong path.
 
-Configure a vulnerable web app environment
+**Meaning:**  
+Disabling the proxy ensures DVWA is accessible and DirBuster scans the correct target.
 
-Validate backend services (MariaDB)
 
-Use DirBuster for directory and file brute‑forcing
 
-Interpret scan results
-
-Document your workflow professionally
