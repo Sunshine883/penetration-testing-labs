@@ -36,7 +36,7 @@ You are entering the configuration phase of the enumeration process.
 ---
 
 ### 3️⃣ Enter Target URL  
-![_Enter_httpaddress_in_TargetURL](screenshots/3_Enter_httpaddress_in_TargetURL.jpg)
+![Enter_Webaddress_in_TargetURL](3_Enter_Webaddress_in_TargetURL.jpg)
 
 **What I did:**  
 Set the target to:  
