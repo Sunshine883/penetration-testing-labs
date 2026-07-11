@@ -111,7 +111,7 @@ DVWA must be reachable directly on port 80. If Firefox is still using Burp Suite
 Meaning:  
 Disabling the proxy ensures DVWA is accessible directly, allowing DirBuster to enumerate the correct target.
 
-🏁 Final Summary
+Final Summary
 This lab demonstrates your ability to:
 
 Configure a vulnerable web app environment
