@@ -32,7 +32,7 @@ You are entering the configuration phase of the enumeration process.
 ---
 
 ### 3️⃣ Enter Target URL  
-![Enter http address in Target URL](3_Enter_httpaddress_in_TargetURL.jpg)
+![Enter_httpaddress_in_TargetURL](3_Enter_httpaddress_in_TargetURL.jpg)
 
 **What you did:**  
 Set the target to:  
@@ -47,7 +47,7 @@ DirBuster will enumerate directories and files inside DVWA.
 ---
 
 ### 4️⃣ Select Wordlists  
-![Select Wordlists](4_Select_Wordlists.jpg)
+![Select_Wordlists](4_Select_Wordlists.jpg)
 
 **What you did:**  
 Selected the medium DirBuster wordlist and enabled:  
@@ -66,7 +66,7 @@ Your scan is configured for realistic penetration testing.
 ---
 
 ### 5️⃣ Start Wordlist Scan  
-![Start Wordlists](5_start_Wordlists.jpg)
+![start_MariaDB](5_start_MariaDB.jpg)
 
 **What you did:**  
 Clicked **Start** to begin brute‑forcing directories and files.
