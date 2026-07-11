@@ -113,7 +113,7 @@ DVWA must be reachable directly on port 80.
 **Meaning:**  
 Disabling the proxy ensures DirBuster scans the correct target.
 
-##Tools Used
+## 🛠️ Tools Used
 
 ### **Kali Linux**
 Used as the penetration testing environment and host for DVWA and DirBuster.
@@ -133,7 +133,10 @@ Used to verify DVWA accessibility and ensure proxy settings were correctly confi
 ### **Linux Terminal**
 Used for package updates, service management, and environment validation.
 
-##Lessons Learned
+
+
+
+## 🎓 Lessons Learned
 
 ### **1. Importance of Proper Environment Setup**
 DirBuster relies on the target application being fully functional. Ensuring MariaDB was running prevented false errors and incomplete scans.
@@ -155,5 +158,3 @@ Watching request speed, queue size, and discovered paths helped confirm that Dir
 
 ### **7. Documentation Is Part of the Skill**
 Capturing screenshots and writing a clear README demonstrates professionalism and helps build a strong cybersecurity portfolio.
-
-
