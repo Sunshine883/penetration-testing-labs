@@ -12,7 +12,7 @@ Hashcat mode: 0 (MD5)
 
 
 Screenshot
-(![Hash Identification](screenshots/1_Hash_Identification.png)
+(![1_Hash_Identification](lab screenshots/1_Hash_Identification.png)
 
 
 
