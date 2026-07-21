@@ -10,6 +10,7 @@ Code
 Hashcat mode: 0 (MD5)
 
 Screenshot
+
 (![Hash_Identification](screenshots/1_Hash_Identification.png)
 
 📂 Dictionary Attack
