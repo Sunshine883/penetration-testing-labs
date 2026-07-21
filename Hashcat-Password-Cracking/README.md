@@ -18,7 +18,7 @@ This confirms the hash is compatible with Hashcat mode 0 (MD5), allowing us to p
 
 Screenshot
 Code
-![Hash Identification](hashid.png)
+![Hash Identification](screenshots/1_Hash_Identification.jpg)
 📂 2. Dictionary Attack (rockyou.txt)
 What I Did
 I attempted to crack the MD5 hash using Hashcat’s dictionary attack mode (-a 0) with the rockyou.txt wordlist.
@@ -35,7 +35,7 @@ This is expected because the password BlueOceans1278 is not a common leaked pass
 
 Screenshot
 Code
-![Dictionary Attack - Exhausted](dictionary-exhausted.png)
+![Dictionary Attack - Exhausted](screenshots/2_Dictionary_attack_status_Exhausted.jpg)
 🔨 3. Brute‑Force Attack (Targeted Mask)
 What I Did
 Since the dictionary attack failed, I used a targeted brute‑force mask:
@@ -55,7 +55,7 @@ This demonstrates how targeted masks can crack long passwords efficiently.
 
 Screenshot
 Code
-![Brute Force Attack](bruteforce.png)
+![Brute Force Attack](screenshots/3_Bruteforce_Crackedpassword.jpg)
 🔐 4. Final Cracked Password Output
 What I Did
 I used the --show option to display the cracked password from Hashcat’s potfile.
@@ -70,7 +70,7 @@ This confirms the password was successfully cracked and stored in Hashcat’s po
 
 Screenshot
 Code
-![Cracked Password Output](cracked-password.png)
+![Cracked Password Output](screenshots/4_Final_show_Output.jpg)
 🧠 Summary
 Hash created and identified as MD5
 
