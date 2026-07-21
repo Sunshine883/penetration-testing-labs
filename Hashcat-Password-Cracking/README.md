@@ -9,13 +9,8 @@ Code
 36e6fa21a3cf6355817252b951751645
 Hashcat mode: 0 (MD5)
 
-
-
 Screenshot
-(![1_Hash_Identification](lab screenshots/1_Hash_Identification.png)
-
-
-
+(![Hash_Identification](screenshots/1_Hash_Identification.png)
 
 📂 Dictionary Attack
 I attempted a dictionary attack using the rockyou.txt wordlist.
