@@ -38,6 +38,7 @@ HTTP GET Request
 ![Filter http](screenshots/http_filter.jpg)
 
 What I Did
+
 I applied the display filter:
 
 Code
