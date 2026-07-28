@@ -14,6 +14,7 @@ These protocols represent foundational skills for SOC analysts, penetration test
 
 🖥️ Environment Setup
 Wireshark Startup & Interface Selection
+
 ![First run Wireshark](screenshots/First_run_Wireshark.jpg)
 
 Wireshark displays all available network interfaces on startup.
@@ -33,6 +34,7 @@ This step demonstrates proper capture setup — a critical skill for packet anal
 
 🌐 HTTP Traffic Analysis
 HTTP GET Request
+
 ![Filter http](screenshots/http_filter.jpg)
 
 What I Did
@@ -74,9 +76,11 @@ This demonstrates my ability to inspect web traffic and understand how clients i
 
 🔎 DNS Traffic Analysis
 DNS Query & Response
+
 ![Filter dns](screenshots/dns_filter.jpg)
 
 What I Did
+
 I applied the DNS filter:
 
 Code
@@ -96,6 +100,7 @@ For the domain example.org
 Returning an AAAA record (IPv6 address)
 
 What It Means
+
 DNS is the “phonebook” of the internet — it translates domain names into IP addresses.
 
 Key insights:
@@ -111,14 +116,18 @@ Background traffic (Mozilla, Cloudflare, Discord) is normal for Firefox
 This demonstrates my ability to interpret DNS behavior and understand how systems resolve domain names.
 
 📡 ICMPv6 Traffic Analysis
+
 ![Filter icmpv6](screenshots/icmpv6_filter.jpg)
 
 What I Did
+
 I applied the filter:
 
 Code
 icmpv6
+
 What I’m Seeing
+
 Two packets appear:
 
 Neighbor Solicitation
@@ -130,6 +139,7 @@ Neighbor Advertisement
 The other device replies: “I have that address.”
 
 What It Means
+
 This is part of IPv6 Neighbor Discovery Protocol, the IPv6 equivalent of ARP in IPv4.
 
 It is used for:
@@ -145,6 +155,7 @@ These packets appear even without manual pings — they are normal background IP
 This demonstrates my understanding of low‑level network discovery mechanisms.
 
 🧠 Conclusion
+
 This Wireshark lab demonstrates my ability to:
 
 Select the correct capture interface
