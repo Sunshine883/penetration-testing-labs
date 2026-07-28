@@ -33,7 +33,7 @@ This step demonstrates proper capture setup — a critical skill for packet anal
 
 🌐 HTTP Traffic Analysis
 HTTP GET Request
-[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+![Filter http](screenshots/http_filter.jpg)
 
 What I Did
 I applied the display filter:
@@ -72,7 +72,7 @@ This demonstrates my ability to inspect web traffic and understand how clients i
 
 🔎 DNS Traffic Analysis
 DNS Query & Response
-[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+![Filter dns](screenshots/dns_filter.jpg)
 
 What I Did
 I applied the DNS filter:
@@ -109,8 +109,7 @@ Background traffic (Mozilla, Cloudflare, Discord) is normal for Firefox
 This demonstrates my ability to interpret DNS behavior and understand how systems resolve domain names.
 
 📡 ICMPv6 Traffic Analysis
-Neighbor Solicitation & Advertisement
-[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+![Filter icmpv6](screenshots/icmpv6_filter.jpg)
 
 What I Did
 I applied the filter:
