@@ -14,7 +14,7 @@ These protocols represent foundational skills for SOC analysts, penetration test
 
 🖥️ Environment Setup
 Wireshark Startup & Interface Selection
-[Looks like the result wasn't safe to show. Let's switch things up and try something else!]
+![First run Wireshark](screenshots/First_run_Wireshark.jpg)
 
 Wireshark displays all available network interfaces on startup.
 For a VirtualBox VM, eth0 is the correct interface because it handles all outbound and inbound traffic for the VM.
