@@ -81,8 +81,8 @@ DNS Query & Response
 
 What I Did
 
-I applied the DNS filter:
 
+I applied the DNS filter:
 Code
 dns
 Then narrowed it to responses only:
