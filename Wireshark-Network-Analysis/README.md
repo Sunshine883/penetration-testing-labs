@@ -59,6 +59,7 @@ Ethernet layer — shows MAC addresses inside the VM
 
 What It Means
 
+
 HTTP GET requests reveal:
 
 What resources a client is requesting
