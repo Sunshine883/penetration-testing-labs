@@ -25,6 +25,7 @@ Wireshark allows analysts to open existing packet capture files for offline anal
 This step demonstrates loading a PCAP and viewing the packet list, details, and byte pane.
 
 screenshot location
+
 ![Opening a PCAP](screenshots/1_Opening_a_PCAP.jpg)
 
 2. Starting a Live Capture
@@ -32,6 +33,7 @@ A live capture is performed by selecting a network interface and beginning packe
 This step shows Wireshark capturing real‑time traffic on the selected interface.
 
 screenshot location
+
 ![Starting a Capture](screenshots/2_Starting_a_capture.jpg)
 
 3. Applying Display Filters
@@ -51,9 +53,11 @@ ip.addr == <target-ip>
 This step demonstrates applying filters to narrow down the packet view.
 
 screenshot location
+
 ![Applying Display Filters](screenshots/3_Applying_display_filters.jpg)
 
 Common Filters Used in This Lab
+
 ![Common Filters Used in Lab](screenshots/Common_filters_used_in_lab.jpg)
 
 
